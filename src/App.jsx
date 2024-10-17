@@ -18,6 +18,7 @@ import { useEffect } from 'react'
 import { fetchProducts } from './redux-toolkit/productReducer'
 import Cart from './components/Cart/Cart'
 import Contact from './components/contact/Contact'
+import ProductDetails from './components/product-details/ProductDetails'
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <Route path="/cart" element={<Cart />} />
       {/* <Route path='/signup' element={<Signup />} /> */}
       <Route path="/contact" element={<Contact />} />
+      <Route path="/products/:id" element={<ProductDetails />} />
       <Route path='/' element={<>
         <SideBar />
         <Flash />

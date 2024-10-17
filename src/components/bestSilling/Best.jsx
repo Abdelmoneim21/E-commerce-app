@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { fetchProducts } from "../../redux-toolkit/productReducer"
 import { FaShoppingCart } from "react-icons/fa";
 import { addToCart } from "../../redux-toolkit/Cart-slice";
+import { Link } from "react-router-dom";
 
 function Best (){
 
@@ -44,6 +45,9 @@ console.log(products)
                 {
                     products.slice(start,end).map((prod)=>{
                         return(
+                          <Link to={`/products/${prod.id}`} key={prod.id}>
+                              
+                          
                             <div key={prod.id} className="max-w-sm hover:bg-[#db4444]  p-4 w-[100%] m-auto bg-white rounded-lg shadow-md">
   <div className="relative">
     <img
@@ -109,9 +113,11 @@ console.log(products)
       <span className="ml-2 text-gray-600">({prod.rating})</span>
     </div>
   </div>
-</div>
+  </div>
+
+                          </Link>
                         )
-                    })
+                       })
                 }
             </div>
         </div>

@@ -30,7 +30,7 @@ function Categories(){
                 <h1 className="font-bold text-[25px] md:text-[40px] ml-[10%] ">Browse By Category</h1>
             </div>
             <div className="categories-cont flex justify-center gap-10 flex-wrap mt-5 mb-10">
-        {categories.slice(0,6).map((category, index) => (
+        {categories.slice(2,8).map((category, index) => (
           <div
             key={index}
             className={`hover:bg-[#db4444] hover:text-white category-box border-2 p-10 rounded-md w-[13%] h-[100%] flex flex-col items-center justify-center 
