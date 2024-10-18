@@ -20,6 +20,7 @@ import Cart from './components/Cart/Cart'
 import Contact from './components/contact/Contact'
 import ProductDetails from './components/product-details/ProductDetails'
 import Wishlist from './components/wishlist/Wishlist'
+import AddProduct from './components/add-product/AddProduct'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       {/* <Route path='/signup' element={<Signup />} /> */}
       <Route path="/contact" element={<Contact />} />
       <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/add" element={<AddProduct />} />
       <Route path="/products/:id" element={<ProductDetails />} />
       <Route path='/' element={<>
         <SideBar />

@@ -28,6 +28,9 @@ export const productsSlice = createSlice({
     addProduct: (state, action) => {
       state.push(action.payload);
     },
+    // searchProduct :(state,action) =>{
+
+    // }
   },
   extraReducers: (builder) => {
     builder.addCase(fetchProducts.fulfilled, (state, action) => {

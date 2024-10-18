@@ -16,6 +16,7 @@ function NavBar(){
             <Link to="/contact" className="mr-3">Contact</Link>
             <Link to="/about">About</Link>
             <Link to="/" className="mr-3">Sign Up</Link>
+            <Link to="/add" className="mr-3">Add product</Link>
           </div>
             <Search />
           <div className="icons flex justify-between align-middle w-[10%]">
