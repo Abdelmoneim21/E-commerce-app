@@ -35,18 +35,18 @@ export default function Wishlist() {
                   ${wish.price || "N/A"}
                 </span>
                 <Link to={`/products/${wish.id}`} key={wish.id}>
-                <button
-                  className="rounded-lg bg-amber-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none"
-                >
-                  view product
-                </button>
+                    <button
+                        className="rounded-lg bg-amber-500 px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none md:px-5 md:py-2.5"
+                    >
+                        View Product
+                    </button>
                 </Link>
-                <button
-                  onClick={() => dispatch(addToCart(wish))} // Add to Cart button handler
-                  className="rounded-lg bg-[#db4444] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none"
-                >
-                  Add to Cart
-                </button>
+                    <button
+                    onClick={() => dispatch(addToCart(wish))}
+                    className="rounded-lg bg-[#db4444] px-4 py-2 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none md:px-5 md:py-2.5"
+                    >
+                    Add to Cart
+                    </button>
                 
               </div>
             </Card>

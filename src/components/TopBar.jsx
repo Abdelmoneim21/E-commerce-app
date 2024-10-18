@@ -1,25 +1,33 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function TopBar(){
-    const[language,setLanguage]=useState("English")
-    const handleLanguage =(e)=>{
-        setLanguage(e.target.value)
-        console.log(language)
-    }
-    return(
-        <div className="cont  bg-[#000] text-white p-0 md:shrink-0 ">
+function TopBar() {
+  const [language, setLanguage] = useState("English");
+  
+  const handleLanguage = (e) => {
+    setLanguage(e.target.value);
+    console.log(e.target.value); // Log the updated language value
+  };
 
-        
-        <div className="Top-bar flex justify-around align-middle p-3">
-            <h2 className="text-end w-[60%]">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span className="ml-2 font-bold underline">ShopNow</span> </h2>
-            <div className="languages ">
-                <select value={language} onChange={handleLanguage} className="bg-black border-none text-white p-2 rounded">
-                    <option value="English">English</option>
-                    <option value="Arabic">Arabic</option>
-                </select>
-            </div>
+  return (
+    <div className="bg-black text-white">
+      <div className="flex flex-col md:flex-row justify-between items-center p-3">
+        <h2 className="text-center md:text-left w-full md:w-[60%] mb-2 md:mb-0">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
+          <span className="ml-2 font-bold underline">Shop Now</span>
+        </h2>
+        <div className="languages">
+          <select 
+            value={language} 
+            onChange={handleLanguage} 
+            className="bg-black border-none text-white p-2 rounded focus:outline-none"
+          >
+            <option value="English">English</option>
+            <option value="Arabic">Arabic</option>
+          </select>
         </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
-export default TopBar
+
+export default TopBar;
