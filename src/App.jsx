@@ -19,6 +19,7 @@ import { fetchProducts } from './redux-toolkit/productReducer'
 import Cart from './components/Cart/Cart'
 import Contact from './components/contact/Contact'
 import ProductDetails from './components/product-details/ProductDetails'
+import Wishlist from './components/wishlist/Wishlist'
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       <Route path="/cart" element={<Cart />} />
       {/* <Route path='/signup' element={<Signup />} /> */}
       <Route path="/contact" element={<Contact />} />
+      <Route path="/wishlist" element={<Wishlist />} />
       <Route path="/products/:id" element={<ProductDetails />} />
       <Route path='/' element={<>
         <SideBar />

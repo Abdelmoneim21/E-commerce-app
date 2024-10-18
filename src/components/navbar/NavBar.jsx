@@ -19,7 +19,7 @@ function NavBar(){
           </div>
             <Search />
           <div className="icons flex justify-between align-middle w-[10%]">
-          <Link to="/cart" className="m-auto"><FaRegHeart size={30}  /></Link>
+          <Link to="/wishlist" className="m-auto"><FaRegHeart size={30}  /></Link>
           <Link to="/cart" className="m-auto"><MdOutlineShoppingCart size={30}  /></Link>
           <Link to="/profile" className="m-auto"><CgProfile size={30}  /></Link>
           </div>

@@ -1,9 +1,10 @@
 import { useEffect ,useState} from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchProducts } from "../../redux-toolkit/productReducer"
-import { FaShoppingCart } from "react-icons/fa";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { addToCart } from "../../redux-toolkit/Cart-slice";
 import { Link } from "react-router-dom";
+import { addToWishlist } from "../../redux-toolkit/wishlistSlice";
 
 function Best (){
 
@@ -13,10 +14,12 @@ function Best (){
   const dispatch = useDispatch()
 
   const cart = useSelector(state => state.cart)
+  const wishlist = useSelector(state => state.wishlist)
 
   useEffect(()=>{
     dispatch(fetchProducts)
   },[])
+  console.log(wishlist)
 //     const [products,setProducts] = useState([])
     const[start,setStart] = useState(0)
   const[end,setEnd] = useState(3)
@@ -31,6 +34,7 @@ console.log(products)
  const handleProducts=()=>{
     setEnd(products.length -21)
  }
+ console.log(wishlist)
     return(
         <div className="Best mt-[5%]">
             <div className="banner  p-4 mb-10 my-auto">
@@ -45,7 +49,7 @@ console.log(products)
                 {
                     products.slice(start,end).map((prod)=>{
                         return(
-                          <Link to={`/products/${prod.id}`} key={prod.id}>
+                          
                               
                           
                             <div key={prod.id} className="max-w-sm hover:bg-[#db4444]  p-4 w-[100%] m-auto bg-white rounded-lg shadow-md">
@@ -58,25 +62,11 @@ console.log(products)
     <div className="absolute top-2 right-2 space-y-2">
       <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100" onClick={()=>{dispatch(addToCart(prod))}}>
       <FaShoppingCart            className="w-5 h-5 "
-          // viewBox="0 0 24 24"
-          // fill="none"
-          // stroke="currentColor"
           />
-
-        {/* <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-5 h-5 text-gray-500"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 21l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3a5.5 5.5 0 014.5 2.09A5.5 5.5 0 0116.5 3C19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.18L12 21z"
+      </button>
+      <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100" onClick={()=>{dispatch(addToWishlist(prod))}}>
+      <FaHeart            className="w-5 h-5 "
           />
-        </svg> */}
       </button>
       <button className="p-2 bg-white rounded-full shadow hover:bg-gray-100">
         <svg
@@ -96,7 +86,7 @@ console.log(products)
       </button>
     </div>
   </div>
-
+  <Link to={`/products/${prod.id}`} key={prod.id}>
   <div className="mt-4">
     <h2 className="text-lg font-semibold">{prod.title}</h2>
     <div className="flex items-center space-x-2 mt-2">
@@ -111,11 +101,12 @@ console.log(products)
         {/* Repeat the star icons as necessary */}
       </div>
       <span className="ml-2 text-gray-600">({prod.rating})</span>
-    </div>
+      </div>
   </div>
+    </Link>
   </div>
 
-                          </Link>
+                          
                         )
                        })
                 }
