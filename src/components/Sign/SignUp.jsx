@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import apiClient from "@/lib/api-client.js";
-import { setUserInfo } from "@/store/slices/authSlice";
-import { SIGNUP_ROUTE } from "@/utils/constants";
+import apiClient from "../../../lib/api-client";
+import { setUserInfo } from "../../redux-toolkit/authSlice"; 
+
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -57,11 +57,11 @@ export default function Signup() {
     <>
       <div className="flex flex-col md:flex-row h-auto md:h-[90vh] py-8 md:py-16 justify-between w-11/12 mx-auto">
         <div className="md:flex justify-center items-center mb-8 md:mb-0 md:w-1/2 hidden">
-          {/* <img
-            src={sideImage}
+          <img
+            src=""
             alt="Shopping Cart and Phone"
             className="w-full h-full object-cover"
-          /> */}
+          />
         </div>
 
         <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20">
@@ -70,7 +70,7 @@ export default function Signup() {
           </h2>
           <p className="text-gray-600 mb-4">Enter your details below</p>
 
-          <form className="space-y-4" onSubmit={handleSignup}>
+          <form className="space-y-4" onClick={handleSignup}>
             <input
               type="text"
               placeholder="Name"

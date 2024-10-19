@@ -21,6 +21,7 @@ import Contact from './components/contact/Contact'
 import ProductDetails from './components/product-details/ProductDetails'
 import Wishlist from './components/wishlist/Wishlist'
 import AddProduct from './components/add-product/AddProduct'
+import Signup from './components/Sign/SignUp'
 
 
 function App() {

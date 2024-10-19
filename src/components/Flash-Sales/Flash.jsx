@@ -88,42 +88,52 @@ function Flash(){
     return(
       
         <div className="flash mt-[100px] pb-8 border-b-4" >
-            <div className="banner  p-4 mb-10 my-auto">
-                <h1 className="text-[#db4444] font-bold text-[20px]">Todays </h1>
-            </div>
-            <div className="sales flex align-middle justify-around">
-                <h1 className="text-[20px] font-bold">Flash Sales</h1>
-                <div className="flex space-x-4 items-center justify-center text-center text-gray-800">
-      <div className="flex flex-col">
-        <span className="text-3xl font-bold">{timeLeft.days || '00'}</span>
-        <span className="text-sm">Days</span>
-      </div>
-      <span className="text-3xl">:</span>
-      <div className="flex flex-col">
-        <span className="text-3xl font-bold">{timeLeft.hours || '00'}</span>
-        <span className="text-sm">Hours</span>
-      </div>
-      <span className="text-3xl">:</span>
-      <div className="flex flex-col">
-        <span className="text-3xl font-bold">{timeLeft.minutes || '00'}</span>
-        <span className="text-sm">Minutes</span>
-      </div>
-      <span className="text-3xl">:</span>
-      <div className="flex flex-col">
-        <span className="text-3xl font-bold">{timeLeft.seconds || '00'}</span>
-        <span className="text-sm">Seconds</span>
-      </div>
-    </div>
-        <div className="arrows flex gap-3 my-auto">
-        <FaArrowCircleLeft size={30} onClick={DecreaseCounter
-          
-        } />
-        <FaArrowCircleRight size={30} onClick={IncreaseCounter
-          
-        }/>
+            <div className="banner p-4 mb-10 my-auto text-center md:text-left">
+  <h1 className="text-[#db4444] font-bold text-[20px] md:text-[28px]">Today's Deals</h1>
+</div>
 
-        </div>
+<div className="sales flex flex-wrap justify-around items-center space-y-4 md:space-y-0">
+  {/* Flash Sales Title */}
+  <h1 className="text-[20px] font-bold md:text-[24px]">Flash Sales</h1>
+
+  {/* Countdown Timer */}
+  <div className="flex space-x-4 items-center justify-center text-center text-gray-800">
+    <div className="flex flex-col">
+      <span className="text-3xl font-bold md:text-4xl">{timeLeft.days || '00'}</span>
+      <span className="text-sm md:text-base">Days</span>
     </div>
+    <span className="text-3xl md:text-4xl">:</span>
+    <div className="flex flex-col">
+      <span className="text-3xl font-bold md:text-4xl">{timeLeft.hours || '00'}</span>
+      <span className="text-sm md:text-base">Hours</span>
+    </div>
+    <span className="text-3xl md:text-4xl">:</span>
+    <div className="flex flex-col">
+      <span className="text-3xl font-bold md:text-4xl">{timeLeft.minutes || '00'}</span>
+      <span className="text-sm md:text-base">Minutes</span>
+    </div>
+    <span className="text-3xl md:text-4xl">:</span>
+    <div className="flex flex-col">
+      <span className="text-3xl font-bold md:text-4xl">{timeLeft.seconds || '00'}</span>
+      <span className="text-sm md:text-base">Seconds</span>
+    </div>
+  </div>
+
+  {/* Arrows for Navigation */}
+  <div className="arrows flex gap-3 my-auto">
+    <FaArrowCircleLeft 
+      size={30} 
+      onClick={DecreaseCounter} 
+      className="cursor-pointer hover:opacity-80" 
+    />
+    <FaArrowCircleRight 
+      size={30} 
+      onClick={IncreaseCounter} 
+      className="cursor-pointer hover:opacity-80" 
+    />
+  </div>
+</div>
+
     <div className="products grid md:grid-cols-3 mt-4 justify-center  gap-4">
     {products.slice(start,end).map((product) =>{
       return(
