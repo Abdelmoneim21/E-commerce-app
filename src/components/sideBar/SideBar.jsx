@@ -23,25 +23,25 @@ function SideBar() {
             src="../../../public/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
-            
+
           />
           <img
-            src="https://wallpapers.com/images/hd/e-commerce-1920-x-1080-wallpaper-osokgb7vlak9hjmi.jpg"
+            src="../../../public/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ0kilQzOV3UE9ZVflCV_1JOhV27r29MpMhozlEWo4rRk44YuzlmTlgBG24lWr7BPeW1k&usqp=CAU"
+            src="../../../public/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
           <img
-            src="https://thumbs.dreamstime.com/b/positive-black-girl-shopping-online-using-laptop-credit-card-e-commerce-concept-positive-black-girl-shopping-online-using-194401972.jpg"
+            src="../../../public/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLufNeTBiWqdw8QAU8ysgrEXOa2cHCFhKKUQ&s"
+            src="../../../public/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
