@@ -1,6 +1,5 @@
 import "./sidebar.css";
 import { Carousel } from "flowbite-react";
-
 function SideBar() {
   return (
     <div className="flex flex-col md:flex-row w-[80%] m-auto">
@@ -21,9 +20,10 @@ function SideBar() {
       <div className="carousel flex-grow h-56 sm:h-64 xl:h-80 2xl:h-96 md:mt-8 xs:mt-3 w-full md:w-[80%]">
         <Carousel>
           <img
-            src="https://wallpapers.com/images/hd/e-commerce-1920-x-1200-wallpaper-qonsimqe6fix04kk.jpg"
+            src="../../../public/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
+            
           />
           <img
             src="https://wallpapers.com/images/hd/e-commerce-1920-x-1080-wallpaper-osokgb7vlak9hjmi.jpg"
