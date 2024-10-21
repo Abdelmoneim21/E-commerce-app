@@ -71,7 +71,7 @@ function Search() {
                 className="rounded-lg bg-amber-500 w-full mb-2 px-4 py-2 text-center text-sm font-medium text-white hover:bg-amber-600 focus:outline-none"
                 onClick={() => dispatch(addToWishlist(product))}
               >
-                View Product
+                <Link to={`/products/${product.id}`} >View Product</Link>
               </button>
               <button
                 onClick={() => dispatch(addToCart(product))}

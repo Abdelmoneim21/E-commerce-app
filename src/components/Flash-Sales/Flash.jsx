@@ -137,13 +137,15 @@ function Flash(){
     <div className="products grid md:grid-cols-3 mt-4 justify-center  gap-4">
     {products.slice(start,end).map((product) =>{
       return(
-      <Link to={`/products/${product.id}`} key={product.id}>
+      
               <Card key={product.id}
               className="max-w-sm  md:w-[70%]"
               imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
               imgSrc={product.images && product.images.length > 0 ? product.images[0] : 'default-image-url'}
 
+
             >
+              <Link to={`/products/${product.id}`} key={product.id}>
               <a href="#">
                 <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                   {product.title}
@@ -194,6 +196,7 @@ function Flash(){
                   5.0
                 </span>
               </div>
+              </Link>
               <div className="flex items-center justify-between">
                 <span className="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
                 <button
@@ -206,7 +209,7 @@ function Flash(){
                 </button>
               </div>
             </Card>
-     </Link>)
+     )
     })}
     </div>
     <button className="bg-[#db4444] mt-[05%] p-4 m-auto block text-white font-bold rounded mb-5"

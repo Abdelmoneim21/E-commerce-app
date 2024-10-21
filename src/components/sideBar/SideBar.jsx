@@ -20,28 +20,27 @@ function SideBar() {
       <div className="carousel flex-grow h-56 sm:h-64 xl:h-80 2xl:h-96 md:mt-8 xs:mt-3 w-full md:w-[80%]">
         <Carousel>
           <img
-            src="../../../public/Frame 561.png"
+            src="/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
 
           />
           <img
-            src="../../../public/Frame 561.png"
+            src="/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
           <img
-            src="../../../public/Frame 561.png"
+            src="/Frame 561.png"
+            className="w-full h-full object-cover"
+          />
+          <img
+            src="/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
           <img
-            src="../../../public/Frame 561.png"
-            alt="..."
-            className="w-full h-full object-cover"
-          />
-          <img
-            src="../../../public/Frame 561.png"
+            src="/Frame 561.png"
             alt="..."
             className="w-full h-full object-cover"
           />
